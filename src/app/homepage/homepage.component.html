@@ -1,0 +1,49 @@
+<app-dashboard></app-dashboard>
+
+<div class="jumbotron">
+  <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text">
+        <img src="assets/icons/launch_post.png"></span>
+    </div>
+    <textarea class="form-control form-rounded" aria-label="With textarea" placeholder="Write Your Post" formControlName="post"></textarea>
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="submit">Button</button>
+    </div>
+  </div>
+  <br>
+</form>
+<!-- Post List -->
+  <ul class="list-group">
+   
+    <li class="list-group-item list-group-item-dark">User Post
+      <div style="float: right">
+      <a href="#" class="btn btn-outline-none">
+        <img src="assets/icons/like.png">Like</a>&nbsp;
+      <a href="#" class="btn btn-outline-none">
+        <img src="assets/icons/comment.png">Comment</a>
+      </div>
+    </li><br>
+
+    <li class="list-group-item list-group-item-dark">User Post
+        <div style="float: right">
+        <a href="#" class="btn btn-outline-none">
+          <img src="assets/icons/like.png">Like</a>&nbsp;
+        <a href="#" class="btn btn-outline-none">
+          <img src="assets/icons/comment.png">Comment</a>
+        </div>
+      </li><br>
+
+      <li class="list-group-item list-group-item-dark">User Post
+          <div style="float: right">
+          <a href="#" class="btn btn-outline-none">
+            <img src="assets/icons/like.png">Like</a>&nbsp;
+          <a href="#" class="btn btn-outline-none">
+            <img src="assets/icons/comment.png">Comment</a>
+          </div>
+        </li><br>
+
+  </ul>
+  <!-- post list close-->
+</div>

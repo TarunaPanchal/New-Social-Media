@@ -1,0 +1,42 @@
+<app-adminheader></app-adminheader>
+<p>
+ 
+</p><br>
+<div class="container" ng-app="formvalid">
+  <div class="panel" data-ng-controller="validationCtrl">
+  <div class="panel-heading border">    
+    <h4> 
+    </h4>
+  </div>
+  <div class="panel-body">
+    
+      <table class="table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
+      <thead>
+        <tr>
+          <!-- <th>Sr.No.</th> -->
+          <th>Name</th>
+          <th>E-mail</th>
+          <th>Bio</th>
+          <th>Address</th>
+          <th>Nice-name</th>
+          <th> Action</th>
+        </tr>
+      </thead>
+        <tbody>
+          <tr *ngFor="let u of users" >
+            <!-- <td>{{index + 1}}</td> -->
+            <td>{{u.name}}</td>
+            <td>{{u.email}}</td>
+            <td>{{u.bio}}</td>
+            <td>{{u.address}}</td>
+            <td>{{u.nickname}}</td>
+            <td>
+                <a href="" ng-hide="" ng-click="">Deactivate</a> &nbsp;
+                <button (click)="deleteAdUnit(u._id)"  class="btn btn-danger">Delete</button>
+              </td>
+          </tr>
+        </tbody>
+    </table>
+  </div>
+</div>
+</div>

@@ -1,0 +1,32 @@
+<app-dashboard></app-dashboard>
+<!-- Center Sections -->
+<div class="jumbotron">
+
+  <div class="card" *ngFor="let notify of notifications">
+
+    <div class="card-body" *ngFor="let list of notify.notification" style="border: 1px solid gray; margin: 1px;">
+      {{list.name}}
+      <div style="float: right">
+          
+          <button class="btn btn-outline-dark" type="submit" (click)="delete(list._id)">Ignore</button>  
+        <button class="btn btn-outline-dark" type="submit" (click)="accept(list._id)">Accept</button>
+      </div>
+    </div>
+
+  </div><br>
+
+  <div class="row view-group">
+
+    <div class="card border-dark mb-2" style="width: 20rem; margin: 10px;" *ngFor="let u of users">
+      <img class="card-img-top" src="assets/icons/user.svg" width="100" height="100" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">{{u.email}}</p>
+        <h5 class="card-title">{{u.name}}</h5>
+        <input type="hidden" name="_id" value="{{u._id}}" id="_id">
+        <button class="btn btn-outline-dark" type="submit" (click)="connect(u._id)">Connect</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- close center sections -->

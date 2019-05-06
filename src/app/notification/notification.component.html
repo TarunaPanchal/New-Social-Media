@@ -1,0 +1,13 @@
+<app-dashboard></app-dashboard>
+<div class="jumbotron">
+
+  <!-- notification List -->
+  <div *ngFor="let notify of notifications">
+    <div class="alert alert-light" role="alert" *ngFor="let list of notify.notification">
+      <strong>{{list.name}}</strong> sent you Friend Request
+    </div>
+  </div>
+  <!-- notification list close-->
+
+
+</div>

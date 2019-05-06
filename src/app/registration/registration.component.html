@@ -1,0 +1,51 @@
+<form [formGroup]="registerFrom" (ngSubmit)="onSubmit()">
+
+  <div class="jumbotron">
+    <!-- Your Profile -->
+
+    <div class="card border-dark mb-3" style="width: 25rem;">
+
+      <img class="card-img-top" src="assets/icons/user.svg" width="100" height="100" alt="Card image cap">
+
+      <div class="card-body">
+
+        <table>
+
+          <tr>
+            <td> <label>First Name</label></td>
+            <td><input type="text" placeholder="FirstName" formControlName="firstname" name="firstname"></td>
+          </tr>
+
+          <tr>
+            <td> <label>Last Name</label></td>
+            <td><input type="text" placeholder="LastName" formControlName="lastname" name="lastname"></td>
+          </tr>
+
+          <tr>
+            <td> <label>Email Address</label></td>
+            <td> <input type="email" placeholder="Email Address" formControlName="email" name="email"></td>
+          </tr>
+
+          <tr>
+            <td> <label>Password</label></td>
+            <td> <input type="password" placeholder="Password" formControlName="password" name="password"></td>
+
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>
+              <button type="submit">Sign Up</button>
+            </td>
+
+          </tr>
+
+        </table>
+        <a href="/login">Already Registered? </a>
+      </div>
+
+    </div>&nbsp;
+
+    <!-- close your profile  -->
+  </div>
+</form>
